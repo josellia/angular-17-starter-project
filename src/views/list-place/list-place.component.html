@@ -1,0 +1,40 @@
+<section class="container">
+  <nav class="category-nav">
+    @for(category of categories; track $index ){
+    <div
+      class="category"
+      (click)="changeCategory(category.type)"
+      [class.category-active]="categorySignal() === category.type"
+    >
+      {{ category.name }}
+    </div>
+    }
+  </nav>
+  <div class="places">
+    @for(place of placesFiltered(); track place.id){
+    <section class="place">
+      <header class="place-header">
+        <img [src]="place.img" [alt]="place.title" />
+        <h3>{{ place.title }}</h3>
+      </header>
+      <div class="place-body">
+        <p>Descrição: {{ place.description }}</p>
+      </div>
+      <div class="place-footer">
+        <p class="raitin">Classificação: {{ place.rating }}</p>
+        @if(!place.favorite){
+        <button class="btn btn-no-favorite" (click)="addFavorite(place.id)">
+          &#10084;
+        </button>
+        }@else{
+        <button class="btn btn-favorite" (click)="addFavorite(place.id)">
+          &#10084;
+        </button>
+        }
+      </div>
+    </section>
+    }@empty {
+    <h6>Parece que você não possui um lugar favorito</h6>
+    }
+  </div>
+</section>

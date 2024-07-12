@@ -1,0 +1,11 @@
+<app-recursion-list [items]="motorcycles">
+  <ng-template let-item>
+    <app-custom-list [item]="item.name" />
+    <!-- <app-custom-list [item]="item.model" /> -->
+  </ng-template>
+</app-recursion-list>
+
+<div>
+  <h5>Add motorcycle</h5>
+  <button (click)="addMotorCicle()">Add</button>
+</div>

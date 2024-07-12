@@ -1,0 +1,20 @@
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-open-modal {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  transition: ease-in-out 0.3s;
+  background-color: rgb(120, 0, 233);
+  color: #fff;
+  cursor: pointer;
+}
+
+.container-list {
+  background-color: #1ed760;
+  margin-top: 20px;
+}

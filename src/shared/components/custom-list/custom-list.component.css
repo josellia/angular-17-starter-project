@@ -1,0 +1,17 @@
+.item-icon li::before {
+  content: attr(data-icon);
+  font-size: 1.25;
+}
+
+.list-item {
+  list-style: none;
+}
+
+/* ol {
+  counter-reset: orderedlist;
+}
+
+ol li::before {
+  counter-increment: orderedlist;
+  content: counter(orderedlist);
+} */

@@ -1,0 +1,12 @@
+<!-- <ul *ngIf="isUnordered">
+    
+  </ul>
+  <ng-container>
+</ng-container> -->
+
+<div *ngFor="let item of items">
+  <ng-template
+    [ngTemplateOutlet]="templateRef"
+    [ngTemplateOutletContext]="{ $implicit: item }"
+  ></ng-template>
+</div>

@@ -1,0 +1,20 @@
+<ul
+  [ngClass]="{
+    'item-icon': isDataIcon
+  }"
+  role="list"
+  *ngIf="isOrderList"
+>
+  <li
+    [ngClass]="{
+      'list-item': isDataIcon
+    }"
+    data-icon="🦄"
+  >
+    {{ item }}
+  </li>
+</ul>
+
+<ol role="list" *ngIf="!isOrderList">
+  <li>{{ item }}</li>
+</ol>

@@ -1,0 +1,24 @@
+<!-- <button (click)="dataService.loadUsers()">Load Data</button>
+<app-custom-list
+  [isOrderList]="false"
+  [data]="dataService.data()"
+></app-custom-list> -->
+
+<app-recursion-list [items]="peoples">
+  <ng-template let-item>
+    <app-custom-list [item]="item.name" />
+  </ng-template>
+</app-recursion-list>
+
+<h3 class="title">Users</h3>
+<div *ngFor="let u of users()">
+  <span>{{ u.name }}</span>
+</div>
+<br />
+
+<app-badge />
+<app-motorcycle-list />
+
+<div class="loading" *ngIf=" loading$ | async">
+  <h4>Please wait...</h4>
+</div>

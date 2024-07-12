@@ -1,0 +1,18 @@
+@use 'colors-variables' as *;
+
+@mixin bg-warn() {
+  color: $bg-warn;
+}
+
+@mixin bg-normal {
+  color: $bg-normal;
+}
+
+@mixin bg-light() {
+  background-color: $bg-light;
+}
+
+@mixin border($tickness) {
+  border: solid $tickness $bg-border;
+  border-radius: 5px;
+}

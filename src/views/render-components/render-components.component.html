@@ -1,0 +1,54 @@
+<!-- <app-modal> </app-modal> -->
+<!-- <ng-template #modal>
+  <div class="modal-body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Mauris rhoncus aenean
+    vel elit scelerisque mauris pellentesque. Diam maecenas sed enim ut.
+    Elementum pulvinar etiam non quam lacus suspendisse. Urna condimentum mattis
+    pellentesque id nibh tortor id. Nisl vel pretium lectus quam id leo in.
+    Donec ac odio tempor orci dapibus. Amet mauris commodo quis imperdiet massa
+    tincidunt. <br /><br />
+    lacinia at quis risus. Nam libero justo laoreet sit amet cursus sit amet
+    dictum. Morbi non arcu risus quis varius quam quisque id diam. Consequat
+    interdum varius sit amet mattis vulputate enim. Urna duis convallis
+    convallis tellus id interdum velit laoreet id.
+  </div>
+  <div class="modal-footer">
+    <button class="button default">Fechar</button>
+    <button class="button primary">Confirmar</button>
+  </div>
+</ng-template> -->
+<div class="btn-container">
+  <button class="btn-open-modal" (click)="openModal(modalTemplate)">
+    Open modal
+  </button>
+</div>
+
+<ng-template #modalTemplate>
+  <div class="modal-body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Mauris rhoncus aenean
+    vel elit scelerisque mauris pellentesque. Diam maecenas sed enim ut.
+    Elementum pulvinar etiam non quam lacus suspendisse. Urna condimentum mattis
+    pellentesque id nibh tortor id. Nisl vel pretium lectus quam id leo in.
+    Donec ac odio tempor orci dapibus. Amet mauris commodo quis imperdiet massa
+    tincidunt. <br /><br />
+    lacinia at quis risus. Nam libero justo laoreet sit amet cursus sit amet
+    dictum. Morbi non arcu risus quis varius quam quisque id diam. Consequat
+    interdum varius sit amet mattis vulputate enim. Urna duis convallis
+    convallis tellus id interdum velit laoreet id.
+  </div>
+  <!-- <div class="modal-footer">
+    <button class="button default">Fechar</button>
+    <button class="button primary">Confirmar</button>
+  </div> -->
+</ng-template>
+
+<!-- LIST-TEMPLATE -->
+<div class="container-list">
+  <app-list-template [items]="contacts">
+    <ng-template let-item>
+      <app-contact-preview [contact]="item" />
+    </ng-template>
+  </app-list-template>
+</div>
